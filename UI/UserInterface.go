@@ -6,6 +6,7 @@ import (
 )
 
 func DisplayNodeInformation(node Model.Node){
+	fmt.Println(node.Text)
 	DisplayOptions(node.Options)
 }
 
