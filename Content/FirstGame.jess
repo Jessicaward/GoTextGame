@@ -1,0 +1,7 @@
+@Start[You wake up in a forest.]
+>Scream[Scream]
+>RunAway[Run Away]
+@Scream[You scream. A bear hears you, and then promptly eats you.]
+>Start[Restart]
+@RunAway[You start to run away. After roughly 10 minutes of running, you come across a village. You meet a kind family, who decide to take you into their home as a guest.]
+>Start[Restart]

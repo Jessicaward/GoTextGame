@@ -1,0 +1,2 @@
+Things I need to fix:
+    -Every time a user needs to load a new node, the file is loaded in again. This shouldn't happen.
