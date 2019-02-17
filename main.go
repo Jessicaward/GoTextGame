@@ -1,7 +1,12 @@
 package main
 
-import "TextAdventureGame/GoTextGame/UI"
+import (
+	"TextAdventureGame/GoTextGame/Node"
+	"TextAdventureGame/GoTextGame/UI"
+)
 
 func main() {
-	UI.DisplayNodeInformation()
+	var node = Node.GetNode("Start")
+
+	UI.DisplayNodeInformation(node)
 }

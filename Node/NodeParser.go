@@ -1,5 +1,7 @@
 package Node
 
+import "TextAdventureGame/GoTextGame/Model"
+
 /*The whole idea behind this parser is to be able to write a simple file format, which can be parsed by this parser.
 The file will need to contain a number of things:
 	-Key for the current node.
@@ -21,3 +23,20 @@ Example of the file format:
 ----
 
 Great Stack Exchange post for this idea: https://gamedev.stackexchange.com/questions/144873/optimizing-data-structure-for-my-text-adventure */
+
+func GetNode(nodeKey string) Model.Node{
+	//todo: remove test code
+	var node Model.Node
+
+	node.Key = "Key"
+	node.Text = "Text to be displayed"
+	node.Options = GetOptionsForNode(nodeKey)
+
+	return node
+}
+
+func GetOptionsForNode(nodeKey string) []Model.Option{
+	var options []Model.Option
+
+	return options
+}
