@@ -2,7 +2,9 @@ package UI
 
 import (
 	"TextAdventureGame/GoTextGame/Model"
+	"bufio"
 	"fmt"
+	"os"
 )
 
 //Summary of node is displayed.
@@ -17,4 +19,11 @@ func DisplayOptions(options []Model.Option){
 	for i := 0; i < len(options); i++{
 		fmt.Println("> " + options[i].Value)
 	}
+}
+
+func DisplayMenu() string{
+	fmt.Println("1. Play")
+	fmt.Println("2. Quit")
+	reader := bufio.NewScanner(os.Stdin)
+	return reader.Text()
 }
