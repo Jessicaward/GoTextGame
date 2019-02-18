@@ -3,6 +3,7 @@ package main
 import (
 	"TextAdventureGame/GoTextGame/Node"
 	"TextAdventureGame/GoTextGame/UI"
+	"os"
 )
 
 //Main game loop.
@@ -25,5 +26,5 @@ func Play(){
 }
 
 func Quit(){
-
+	os.Exit(3)
 }
