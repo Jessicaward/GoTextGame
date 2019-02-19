@@ -32,7 +32,7 @@ Great Stack Exchange post for the node/option idea: https://gamedev.stackexchang
 //This returns the current node, along with all the options.
 func GetNode(nodeKey string, openedFile string) Model.Node{
 	var node Model.Node
-	nodeLine := strings.Split(openedFile, "@" + nodeKey)[1]
+	nodeLine := strings.Split(strings.Split(openedFile, "@" + nodeKey)[1], "@")[0]
 	optionLines := strings.Split(nodeLine, ">")
 
 	node.Key = nodeKey
@@ -44,10 +44,15 @@ func GetNode(nodeKey string, openedFile string) Model.Node{
 
 //This returns all the options from the node, specified by node key.
 func GetOptionsForNode(nodeKey string, optionLines []string) []Model.Option{
-	var options []Model.Option
+	options := make([]Model.Option, len(optionLines))
 
 	for i := 0; i < len(optionLines); i++{
+		var option Model.Option
+		
+		option.NodeKey = ""
+		option.Value = ""
 
+		options = append(options, option)
 	}
 
 	return options

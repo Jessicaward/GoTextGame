@@ -11,12 +11,12 @@ func main() {
 	userInput := UI.DisplayMenu()
 
 	switch userInput{
-		case "1":
-		case "Play":
-		case "play":
-			Play()
-		default:
+		case "2":
+		case "Quit":
+		case "quit":
 			Quit()
+	default:
+			Play()
 	}
 }
 
