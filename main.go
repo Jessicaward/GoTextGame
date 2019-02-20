@@ -10,13 +10,10 @@ import (
 func main() {
 	userInput := UI.DisplayMenu()
 
-	switch userInput{
-		case "2":
-		case "Quit":
-		case "quit":
-			Quit()
-	default:
-			Play()
+	if userInput == "1" || userInput == "Play" || userInput == "play" {
+		Play()
+	} else {
+		Quit()
 	}
 }
 
