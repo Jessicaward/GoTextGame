@@ -48,9 +48,10 @@ func GetOptionsForNode(nodeKey string, optionLines []string) []Model.Option{
 
 	for i := 0; i < len(optionLines); i++{
 		var option Model.Option
-		
-		option.NodeKey = ""
-		option.Value = ""
+		newStr :=strings.Split(optionLines[i], "[")[1]
+
+		option.NodeKey = strings.Split(strings.Split(optionLines[i], "[")[0], "]")[0]
+		option.Value = newStr[:len(newStr) - 1]
 
 		options = append(options, option)
 	}
